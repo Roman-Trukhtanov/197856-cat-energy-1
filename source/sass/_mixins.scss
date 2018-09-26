@@ -1,0 +1,16 @@
+@mixin title-stroke {
+  &::after {
+    content: "";
+    display: block;
+
+    position: absolute;
+    left: 0;
+
+    margin-top: 14px;
+    height: 3px;
+    width: 100%;
+    background-color: $bg-green;
+
+    z-index: -1;
+  }
+}

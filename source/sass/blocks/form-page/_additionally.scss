@@ -1,0 +1,127 @@
+.additionally {
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.additionally__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.additionally__item:not(:last-child) {
+  margin-bottom: 13px;
+}
+
+.additionally__label {
+  display: flex;
+  align-items: center;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  color: #222222;
+
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    margin-right: 17px;
+
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid #cdcdcd;
+  }
+
+  &:hover::before {
+    border: 1px solid #bababa;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.additionally__checkbox:focus ~ .additionally__label::before {
+  border: 1px solid #bababa;
+}
+
+.additionally__checkbox:checked ~ .additionally__label {
+  &::before {
+    background-image: url("../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 21px 16px;
+  }
+
+  &:hover::before {
+    border: 1px solid #bababa;
+  }
+}
+
+.additionally__checkbox:focus:checked ~ .additionally__label::before {
+  border: 1px solid #bababa;
+}
+
+@media (min-width: $tablet-width) {
+  .additionally {
+    padding-top: 49px;
+  }
+
+  .additionally__wrapper {
+    padding-top: 22px;
+  }
+
+  .additionally__list {
+    margin-left: 40px;
+    margin-right: 38px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .additionally__item {
+    width: 287px;
+  }
+
+  .additionally__item:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  .additionally__label {
+    font-size: 20px;
+    line-height: 20px;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additionally {
+    padding-top: 50px;
+  }
+
+  .additionally__subtitle {
+    margin-left: -30px;
+  }
+
+  .additionally__list {
+    margin: 0;
+  }
+
+  .additionally__item {
+    width: 245px;
+  }
+
+  .additionally__label::before {
+    margin-right: 18px;
+  }
+}

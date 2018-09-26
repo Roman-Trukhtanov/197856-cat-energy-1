@@ -1,0 +1,30 @@
+.questionnaire__subtitle {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 15px;
+
+  width: 270px;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+
+@media (min-width: $tablet-width) {
+  .questionnaire__subtitle {
+    margin-left: 40px;
+    width: 345px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .questionnaire__subtitle {
+    margin-left: 0;
+    width: 345px;
+  }
+}

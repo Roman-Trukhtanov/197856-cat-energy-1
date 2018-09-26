@@ -1,6 +1,5 @@
 .DS_Store
 .idea
-.vscode
 *.ai
 *.log
 *.pdf
@@ -10,3 +9,4 @@ node_modules/
 npm-debug.*
 source/css/*.css
 Thumbs.db
+build/

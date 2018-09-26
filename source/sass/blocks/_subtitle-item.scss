@@ -1,0 +1,45 @@
+.subtitle-item {
+  margin-bottom: 34px;
+  display: flex;
+
+  @include title-stroke;
+}
+
+.subtitle-item__wrapper {
+  padding: 0;
+
+  display: flex;
+  justify-content: flex-start;
+}
+
+.subtitle-item__text {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  margin: 0;
+
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color: $title-color;
+  background-color: $bg-white;
+}
+
+@media (min-width: $tablet-width) {
+  .subtitle-item__wrapper {
+    padding: 0 30px;
+  }
+
+  .subtitle-item__text {
+    padding-left: 40px;
+    padding-right: 40px;
+
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .subtitle-item::after {
+    margin-top: 22px;
+  }
+}

@@ -1,0 +1,173 @@
+.contacts {
+  padding-top: 28px;
+}
+
+.contacts__company {
+  margin-bottom: 26px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contacts__title {
+  width: 50%;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  color: #000000;
+}
+
+.contacts__company-address {
+  margin: 0;
+  width: 50%;
+
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.contacts__map {
+  height: 362px;
+  position: relative;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contacts__map-google-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: 1;
+}
+
+.contacts__map-google {
+  height: 362px;
+  width: 100%;
+}
+
+.contacts__map-link {
+  overflow: hidden;
+
+  position: relative;
+  background-color: $bg-grey;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: 129px;
+    top: 138px;
+
+    width: 62px;
+    height: 53px;
+
+    background-color: transparent;
+
+    background-image: url("../img/map-pin.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    background-size: cover;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    padding-top: 63px;
+
+    background-color: $bg-grey;
+
+    &--index-page {
+      background-color: $bg-white;
+    }
+  }
+
+  .contacts__map {
+    height: 400px;
+  }
+
+  .contacts__map-google {
+    height: 400px;
+  }
+
+  .contacts__map-link::before {
+    left: 129px;
+    top: 138px;
+
+    width: 124px;
+    height: 106px;
+  }
+
+  .contacts__company {
+    margin-bottom: 57px;
+    padding-left: 40px;
+    padding-right: 42px;
+  }
+
+  .contacts__title {
+    width: 170px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .contacts__company-address {
+    width: 170px;
+    font-size: 16px;
+    line-height: 20px;
+
+    text-align: right;
+  }
+
+  .contacts__company-address-city {
+    display: inline-block;
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    padding-top: 0;
+  }
+
+  .contacts__wrapper {
+    z-index: 50;
+    position: relative;
+  }
+
+  .contacts__company {
+    padding-top: 63px;
+    padding-bottom: 58px;
+    padding-left: 76px;
+    padding-right: 74px;
+
+    position: absolute;
+    left: 40px;
+    top: 95px;
+
+    width: 570px;
+
+    background-color: $bg-white;
+  }
+
+  .contacts__map-link::before {
+    left: auto;
+    top: 151px;
+    right: 318px;
+  }
+
+  .contacts__map-image {
+    margin: 0;
+  }
+
+  .contacts__company-address {
+    text-align: left;
+  }
+}

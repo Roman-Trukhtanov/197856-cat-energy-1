@@ -1,0 +1,140 @@
+.promo-block {
+  margin-bottom: 23px;
+  padding-top: 27px;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    margin: 0 auto;
+
+    display: block;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: -1;
+    width: 320px;
+    height: 305px;
+
+    background-color: $bg-green;
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+      background-size: cover;
+    }
+  }
+}
+
+.promo-block__title {
+  margin: 0;
+  margin-bottom: 25px;
+
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.promo-block__slogan {
+  margin: 0;
+  margin-bottom: 29px;
+
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.promo-block__link {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+@media (min-width: $tablet-width) {
+  .promo-block {
+    padding-top: 21px;
+    margin-bottom: 29px;
+
+    min-height: 800px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .promo-block__wrapper {
+    padding-left: 88px;
+  }
+
+  .promo-block__title {
+    margin-bottom: 41px;
+
+    width: 427px;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+
+    color: $title-color;
+  }
+
+  .promo-block__slogan {
+    margin-bottom: 48px;
+
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+    color: #000000;
+  }
+
+  .promo-block__image {
+    position: absolute;
+    left: 28px;
+    top: 221px;
+    z-index: -1;
+  }
+
+  .promo-block__link {
+    padding: 15px 0;
+    width: 245px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo-block {
+    min-height: 598px;
+    padding-top: 66px;
+    margin-bottom: 22px;
+  }
+
+  .promo-block__wrapper {
+    padding-left: 81px;
+  }
+
+  .promo-block__slogan {
+    margin-bottom: 54px;
+  }
+
+  .promo-block__image {
+    left: auto;
+    top: -14px;
+    right: 258px;
+  }
+
+  .promo-block__link {
+    padding-right: 5px;
+  }
+}

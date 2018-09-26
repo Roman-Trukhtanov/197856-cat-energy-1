@@ -1,0 +1,88 @@
+.additional-good__name {
+  margin: 0;
+  margin-bottom: 13px;
+
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  color: #222222;
+}
+
+.additional-good__characteristics {
+  margin-bottom: 15px;
+
+  width: 100%;
+
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 400;
+}
+
+.additional-good__characteristics-price {
+  text-align: right;
+}
+
+@media (min-width: $tablet-width) {
+  .additional-good {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .additional-good__name {
+    margin: 0;
+    width: 285px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .additional-good__characteristics {
+    margin: 0;
+    margin-top: 7px;
+
+    width: 285px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .additional-good__characteristics-name,
+  .additional-good__characteristics-value {
+    text-align: right;
+  }
+
+  .additional-good__characteristics-value {
+    width: 190px;
+  }
+
+  .additional-good__characteristics-name {
+    width: 95px;
+  }
+
+  .additional-good__link {
+    margin-top: 23px;
+    width: 100%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additional-good {
+    align-items: center;
+  }
+
+  .additional-good__characteristics {
+    margin-top: 10px;
+  }
+
+  .additional-good__characteristics-value {
+    text-align: left;
+  }
+
+  .additional-good__link {
+    margin-top: 0;
+    width: 245px;
+  }
+}

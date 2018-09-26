@@ -1,0 +1,107 @@
+.personal-data__list {
+  margin: 0;
+  padding: 23px 0;
+
+  list-style: none;
+}
+
+.personal-data__item {
+  display: flex;
+  align-items: center;
+}
+
+.personal-data__item:not(:last-child) {
+  margin-bottom: 14px;
+}
+
+.personal-data__label {
+  margin-right: 17px;
+
+  flex-shrink: 0;
+
+  max-width: 50%;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  color: #222222;
+}
+
+.personal-data__field {
+  padding: 10px 15px 12px 15px;
+  width: 100%;
+
+  text-transform: uppercase;
+
+  border: 1px solid #e6e6e6;
+  color: #222222;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border: 1px solid #cdcdcd;
+  }
+
+  &:active {
+    border: 1px solid #444444;
+  }
+
+  &--error {
+    border: 1px solid #ff8282;
+  }
+}
+
+.personal-data__field::placeholder {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  color: #444444;
+}
+
+@media (min-width: $tablet-width) {
+  .personal-data {
+    margin-left: 42px;
+    margin-right: 38px;
+    margin-bottom: 21px;
+  }
+
+  .personal-data__list {
+    padding: 50px 0;
+  }
+
+
+  .personal-data__item:not(:last-child) {
+    margin-bottom: 18px;
+  }
+
+  .personal-data__label {
+    margin-right: 17px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .personal-data__field {
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .personal-data__field::placeholder {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .personal-data {
+    margin: 0;
+
+    width: 570px;
+  }
+}

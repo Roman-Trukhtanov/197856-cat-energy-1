@@ -26,7 +26,6 @@
     "gulp-webp": "^3.0.0",
     "path": "^0.12.7",
     "posthtml-include": "^1.2.0",
-    "run-sequence": "^2.2.1",
     "stylelint": "9.6.x",
     "stylelint-config-htmlacademy": "0.1.x"
   },

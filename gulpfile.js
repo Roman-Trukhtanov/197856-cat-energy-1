@@ -102,10 +102,6 @@ gulp.task("style", function(done) {
   done();
 });
 
-var runImageOptim = function () {
-  gulp.series("images", "webp");
-};
-
 gulp.task("serve", function() {
   server.init({
     server: PUBLIC_DEST,
@@ -118,7 +114,7 @@ gulp.task("serve", function() {
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("style"));
   gulp.watch("source/*.html", gulp.series("html")).on("change", server.reload);
   gulp.watch("source/js/*.js", gulp.series("minjs")).on("change", server.reload);
-  gulp.watch("source/img/**/*.{png,jpg}", runImageOptim);
+  gulp.watch("source/img/**/*.{png,jpg}", gulp.series("images", "webp"));
 });
 
 gulp.task("build", gulp.series("clean", "images", "webp", "copy", "minjs", "style", "sprite","html"));

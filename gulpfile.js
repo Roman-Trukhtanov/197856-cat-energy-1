@@ -101,6 +101,11 @@ gulp.task("style", function(done) {
   done();
 });
 
+gulp.task("refresh", function(done) {
+  server.reload();
+  done();
+});
+
 gulp.task("serve", function() {
   server.init({
     server: PUBLIC_DEST,
@@ -111,9 +116,10 @@ gulp.task("serve", function() {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("style"));
-  gulp.watch("source/*.html", gulp.series("html")).on("change", server.reload);
-  gulp.watch("source/js/*.js", gulp.series("minjs")).on("change", server.reload);
-  gulp.watch("source/img/**/*.{png,jpg}", gulp.series("images", "webp"));
+  gulp.watch("source/img/**/sprite-*.svg", gulp.series("sprite", "html", "refresh"));
+  gulp.watch("source/*.html", gulp.series("html", "refresh"));
+  gulp.watch("source/js/**/*.js", gulp.series("minjs", "refresh"));
+  gulp.watch("source/img/**/*.{png,jpg,gif,svg}", gulp.series("images", "webp"));
 });
 
 gulp.task("build", gulp.series("clean", "images", "webp", "copy", "minjs", "style", "sprite", "html"));
